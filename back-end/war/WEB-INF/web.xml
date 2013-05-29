@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>progetto1.0</display-name>
+  <context-param>
+    <description>Location to store uploaded file</description>
+    <param-name>file-upload</param-name>
+    <param-value>
+         D:/Programmi/EasyPHP/www/Front-end/images/
+     </param-value>
+  </context-param>
+  
+  <servlet>
+   <servlet-name>UploadServlet</servlet-name>
+   <servlet-class>aggiungiFilm.UploadServlet</servlet-class>
+</servlet>
+  <servlet>
+    <servlet-name>AddToCartServlet</servlet-name>
+    <servlet-class>bookstore.AddToCartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BookServlet</servlet-name>
+    <servlet-class>bookstore.BookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AggiungiUtenti</servlet-name>
+    <servlet-class>aggiungiUtenti.AggiungiUtenti</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RicercaUtente</servlet-name>
+    <servlet-class>ricercaUtenti.RicercaUtente</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RimuoviUtente</servlet-name>
+    <servlet-class>rimuoviUtenti.RimuoviUtente</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AggiungiFilm</servlet-name>
+    <servlet-class>aggiungiFilm.AggiungiFilm</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RimuoviFilm</servlet-name>
+    <servlet-class>rimuoviFilm.RimuoviFilm</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ModificaUtente</servlet-name>
+    <servlet-class>modificaUtente.ModificaUtente</servlet-class>
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>UploadServlet</servlet-name>
+   <url-pattern>/UploadServlet</url-pattern>
+</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ModificaUtente</servlet-name>
+    <url-pattern>/servletModificaUtente</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddToCartServlet</servlet-name>
+    <url-pattern>/addToCart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookServlet</servlet-name>
+    <url-pattern>/displayBook</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AggiungiUtenti</servlet-name>
+    <url-pattern>/servletAggiungiUtente</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RicercaUtente</servlet-name>
+    <url-pattern>/servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RimuoviUtente</servlet-name>
+    <url-pattern>/servletRimuoviUtente</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AggiungiFilm</servlet-name>
+    <url-pattern>/servletAggiungiFilm</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RimuoviFilm</servlet-name>
+    <url-pattern>/servletRimuoviFilm</url-pattern>
+  </servlet-mapping>
+  <session-config>
+    <session-timeout>3000</session-timeout>
+  </session-config>
+  <welcome-file-list>
+    <welcome-file>
+            login.html
+        </welcome-file>
+  </welcome-file-list>
+  
+  
+  
+</web-app>
